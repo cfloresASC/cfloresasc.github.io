@@ -5,12 +5,13 @@ var player;
 var MAX_SPEED = 10;
 var MAX_SPEED1 = 40;
 var score = 0;
-var score1 = 0;
+var score1 = -1;
 var enemy;
 var ball;
 var wallTop;
 var wallBottom;
-var game = true;
+var game = false;
+var homescreen = true;
 function setup() {
   createCanvas(1350,600);
   textSize(70);
@@ -37,6 +38,21 @@ function setup() {
 }
 
 function draw() {
+  if (homescreen === true) {
+        background(128,188,163)
+        textSize(50)
+        fill(255,255,255)
+        text("Can You Beat Serena Williams?", 675,100)
+        text("Press Enter to Play",675,250)
+        textSize(25)
+        text("(Be careful of her Curve Ball)",675,305)
+        textSize(50)
+        text("Press Spacebar to Start",675,450)
+        if (keyCode === 32){
+            homescreen = false
+            game = true
+        }
+       } 
 if(game === true){
   background(3,101,100);
   text(score1, 765, 40)
