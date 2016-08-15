@@ -11,7 +11,8 @@ var ball;
 var wallTop;
 var wallBottom;
 var game = false;
-var homescreen = true;
+var homescreen = false;
+var countrymenu = true;
 function setup() {
   createCanvas(1350,600);
   textSize(70);
@@ -39,9 +40,97 @@ function setup() {
   player.shapeColor = enemy.shapeColor = ball.shapeColor = color(255,255,255);
   
   ball.setSpeed(MAX_SPEED, -180);
+    usa = createSprite(325,175,25,25)
+    usa.addImage(loadImage("https://wjohnson1.github.io/Olympics/usa.png"))
+    russia = createSprite(650,175,25,25)
+    russia.addImage(loadImage("https://wjohnson1.github.io/Olympics/russia.png"))
+    brazil = createSprite(975,175,25,25)
+    brazil.addImage(loadImage("https://wjohnson1.github.io/Olympics/brazil.png"))
+    china = createSprite(270,325,25,25)
+    china.addImage(loadImage("https://wjohnson1.github.io/Olympics/china.png"))
+    australia = createSprite(540,325,25,25)
+    australia.addImage(loadImage("https://wjohnson1.github.io/Olympics/australia.png"))
+    france = createSprite(810,325,25,25)
+    france.addImage(loadImage("https://wjohnson1.github.io/Olympics/france.png"))
+    germany = createSprite(1080,325,25,25)
+    germany.addImage(loadImage("https://wjohnson1.github.io/Olympics/germany.png"))
+    greatb = createSprite(325,500,25,25)
+    greatb.addImage(loadImage("https://wjohnson1.github.io/Olympics/greatb.png"))
+    italy = createSprite(650,500,25,25)
+    italy.addImage(loadImage("https://wjohnson1.github.io/Olympics/italy.png")) 
+    mexico = createSprite(975,500,25,25)
+    mexico.addImage(loadImage("https://wjohnson1.github.io/Olympics/mexico.png")) 
 }
 
 function draw() {
+if (countrymenu === true) {
+        background(123,183,166)
+        drawSprites()
+        textSize(50)
+        text("Press the key under the country you want to play as",70,50)
+        textSize(25)
+        text("0",320,225)
+        text("1",645,225)
+        text("2",970,225)
+        text("3",265,375)
+        text("4",535,375)
+        text("5",805,375)
+        text("6",1075,375)
+        text("7",320,550)
+        text("8",645,550)
+        text("9",970,550)
+        if (keyDown(48)) {
+            countrymenu = false
+            homescreen = true
+            yourteam = "https://wjohnson1.github.io/Olympics/usa.png"
+        }
+        if (keyDown(49)) {
+            countrymenu = false
+            homescreen = true
+            yourteam = "https://wjohnson1.github.io/Olympics/russia.png"
+        }
+        if (keyDown(50)) {
+            countrymenu = false
+            homescreen = true
+            yourteam = "https://wjohnson1.github.io/Olympics/brazil.png"
+        }
+        if (keyDown(51)) {
+            countrymenu = false
+            homescreen = true
+            yourteam = "https://wjohnson1.github.io/Olympics/china.png"
+        }
+        if (keyDown(52)) {
+            countrymenu = false
+            homescreen = true
+            yourteam = "https://wjohnson1.github.io/Olympics/australia.png"
+        }
+        if (keyDown(53)) {
+            countrymenu = false
+            homescreen = true
+            yourteam = "https://wjohnson1.github.io/Olympics/france.png"
+        }
+        if (keyDown(54)) {
+            countrymenu = false
+            homescreen = true
+            yourteam = "https://wjohnson1.github.io/Olympics/germany.png"
+        }
+        if (keyDown(55)) {
+            countrymenu = false
+            homescreen = true
+            yourteam = "https://wjohnson1.github.io/Olympics/greatb.png"
+        }
+        if (keyDown(56)) {
+            countrymenu = false
+            homescreen = true
+            yourteam = "https://wjohnson1.github.io/Olympics/italy.png"
+        }
+        if (keyDown(57)) {
+            countrymenu = false
+            homescreen = true
+            yourteam = "https://wjohnson1.github.io/Olympics/mexico.png"
+        }                                                                        
+    }
+
   if (homescreen === true) {
         background(128,188,163)
         textSize(50)
@@ -52,6 +141,16 @@ function draw() {
         text("(Be careful of her Curve Ball)",675,305)
         textSize(50)
         text("Press Spacebar to Start",675,450)
+        usa.remove()
+        russia.remove()
+        brazil.remove()
+        china.remove()
+        australia.remove()
+        france.remove()
+        germany.remove()
+        greatb.remove()
+        italy.remove()
+        mexico.remove()
         if (keyCode === 32){
             homescreen = false
             game = true
