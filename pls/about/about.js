@@ -7,3 +7,8 @@ $(document).ready(function() {
     }, 3000);
  
 });
+
+  function play(){
+       var audio = document.getElementById("audio");
+       audio.play();
+                 }
