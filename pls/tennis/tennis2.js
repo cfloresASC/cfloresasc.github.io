@@ -82,47 +82,47 @@ if (countrymenu === true) {
         if (keyDown(48)) {
             countrymenu = false
             homescreen = true
-            yourteam = "https://wjohnson1.github.io/Olympics/usa.png"
+            yourteam = "https://cfloresasc.github.io/pls/tennis/usa.png"
         }
         if (keyDown(49)) {
             countrymenu = false
             homescreen = true
-            yourteam = "https://wjohnson1.github.io/Olympics/russia.png"
+            yourteam = "https://cfloresasc.github.io/pls/tennis/russia.png"
         }
         if (keyDown(50)) {
             countrymenu = false
             homescreen = true
-            yourteam = "https://wjohnson1.github.io/Olympics/brazil.png"
+            yourteam = "https://cfloresasc.github.io/pls/tennis/brazil.png"
         }
         if (keyDown(51)) {
             countrymenu = false
             homescreen = true
-            yourteam = "https://wjohnson1.github.io/Olympics/china.png"
+            yourteam = "https://cfloresasc.github.io/pls/tennis/china.png"
         }
         if (keyDown(52)) {
             countrymenu = false
             homescreen = true
-            yourteam = "https://wjohnson1.github.io/Olympics/australia.png"
+            yourteam = "https://cfloresasc.github.io/pls/tennis/australia.png"
         }
         if (keyDown(53)) {
             countrymenu = false
             homescreen = true
-            yourteam = "https://wjohnson1.github.io/Olympics/france.png"
+            yourteam = "https://cfloresasc.github.io/pls/tennis/france.png"
         }
         if (keyDown(54)) {
             countrymenu = false
             homescreen = true
-            yourteam = "https://wjohnson1.github.io/Olympics/germany.png"
+            yourteam = "https://cfloresasc.github.io/pls/tennis/germany.png"
         }
         if (keyDown(55)) {
             countrymenu = false
             homescreen = true
-            yourteam = "https://wjohnson1.github.io/Olympics/greatb.png"
+            yourteam = "https://cfloresasc.github.io/pls/tennis/greatb.png"
         }
         if (keyDown(56)) {
             countrymenu = false
             homescreen = true
-            yourteam = "https://wjohnson1.github.io/Olympics/italy.png"
+            yourteam = "https://cfloresasc.github.io/pls/tennis/italy.png"
         }
         if (keyDown(57)) {
             countrymenu = false
