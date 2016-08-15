@@ -25,6 +25,7 @@ function setup() {
   
   enemy = createSprite(width-28, height/2, 10, 300);
   enemy.movable = true;
+  enemy.addImage(loadImage("https://cfloresasc.github.io/pls/tennis/images2.png"))
   
   wallTop = createSprite(width/2, -30/2, width, 30);
   wallTop.immovable = true;
