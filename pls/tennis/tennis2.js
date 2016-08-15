@@ -63,37 +63,11 @@ function setup() {
 }
 
 function draw() {
-
-  if (homescreen === true) {
-        background(128,188,163)
-        textSize(50)
-        fill(255,255,255)
-        text("Can You Beat Serena Williams?", 675,100)
-        text("Press Enter to Play",675,250)
-        textSize(25)
-        text("(Be careful of her Curve Ball)",675,305)
-        textSize(50)
-        text("Press Spacebar to Start",675,450)
-        usa.remove()
-        russia.remove()
-        brazil.remove()
-        china.remove()
-        australia.remove()
-        france.remove()
-        germany.remove()
-        greatb.remove()
-        italy.remove()
-        mexico.remove()
-         if (keyCode === 32){
-            homescreen = false
-            game = true
-        }
-       } 
 if (countrymenu === true) {
         background(123,183,166)
         drawSprites()
         textSize(50)
-        text("Press the key under the country you want to play as",70,50)
+        text("Press the key under the country you want to play as",670,50)
         textSize(25)
         text("0",320,225)
         text("1",645,225)
@@ -157,10 +131,37 @@ if (countrymenu === true) {
         }                                                                        
     }
 
+  if (homescreen === true) {
+        background(128,188,163)
+        textSize(50)
+        fill(255,255,255)
+        text("Can You Beat Serena Williams?", 675,100)
+        text("Press Enter to Play",675,250)
+        textSize(25)
+        text("(Be careful of her Curve Ball)",675,305)
+        textSize(50)
+        text("Press Spacebar to Start",675,450)
+        usa.remove()
+        russia.remove()
+        brazil.remove()
+        china.remove()
+        australia.remove()
+        france.remove()
+        germany.remove()
+        greatb.remove()
+        italy.remove()
+        mexico.remove()
+         if (keyCode === 32){
+            homescreen = false
+            game = true
+        }
+       } 
 if(game === true){
   background(3,101,100);
   text(score1, 765, 40)
   text(score, 575, 40);
+  team = createSprite(200,200, 100, 100);
+  team.addImage(loadImage(yourteam));
   enemy.collide(wallBottom)
   player.position.y = constrain(mouseY, player.height/3, height-player.height/3);
 
