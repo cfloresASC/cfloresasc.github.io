@@ -127,7 +127,7 @@ if (countrymenu === true) {
         if (keyDown(57)) {
             countrymenu = false
             homescreen = true
-            yourteam = "https://wjohnson1.github.io/Olympics/mexico.png"
+            yourteam = "https://cfloresasc.github.io/pls/tennis/mexico.png"
         }                                                                        
     }
 
