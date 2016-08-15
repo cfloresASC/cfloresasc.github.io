@@ -160,7 +160,7 @@ if(game === true){
   background(3,101,100);
   text(score1, 765, 40)
   text(score, 575, 40);
-  team = createSprite(200,200, 100, 100);
+  team = createSprite(675,4, 100, 100);
   team.addImage(loadImage(yourteam));
   enemy.collide(wallBottom)
   player.position.y = constrain(mouseY, player.height/3, height-player.height/3);
