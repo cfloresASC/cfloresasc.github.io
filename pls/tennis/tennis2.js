@@ -63,14 +63,40 @@ function setup() {
 }
 
 function draw() {
+
+  if (homescreen === true) {
+        background(128,188,163)
+        textSize(50)
+        fill(255,255,255)
+        text("Can You Beat Serena Williams?", 675,100)
+        text("Press Enter to Play",675,250)
+        textSize(25)
+        text("(Be careful of her Curve Ball)",675,305)
+        textSize(50)
+        text("Press Spacebar to Start",675,450)
+        usa.remove()
+        russia.remove()
+        brazil.remove()
+        china.remove()
+        australia.remove()
+        france.remove()
+        germany.remove()
+        greatb.remove()
+        italy.remove()
+        mexico.remove()
+         if (keyCode === 32){
+            homescreen = false
+            game = true
+        }
+       } 
 if (countrymenu === true) {
         background(123,183,166)
         drawSprites()
         textSize(50)
-        text("Press the key under the country you want to play as",675,200)
+        text("Press the key under the country you want to play as",70,50)
         textSize(25)
-        text("0",675,225)
-        text("1",675,225)
+        text("0",320,225)
+        text("1",645,225)
         text("2",970,225)
         text("3",265,375)
         text("4",535,375)
@@ -131,31 +157,6 @@ if (countrymenu === true) {
         }                                                                        
     }
 
-  if (homescreen === true) {
-        background(128,188,163)
-        textSize(50)
-        fill(255,255,255)
-        text("Can You Beat Serena Williams?", 675,100)
-        text("Press Enter to Play",675,250)
-        textSize(25)
-        text("(Be careful of her Curve Ball)",675,305)
-        textSize(50)
-        text("Press Spacebar to Start",675,450)
-        usa.remove()
-        russia.remove()
-        brazil.remove()
-        china.remove()
-        australia.remove()
-        france.remove()
-        germany.remove()
-        greatb.remove()
-        italy.remove()
-        mexico.remove()
-        if (keyCode === 32){
-            homescreen = false
-            game = true
-        }
-       } 
 if(game === true){
   background(3,101,100);
   text(score1, 765, 40)
