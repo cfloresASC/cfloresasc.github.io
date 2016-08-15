@@ -19,7 +19,7 @@ function setup() {
 
   player = createSprite(30, height/2, 10, 100);
   player.immovable = true;
-  player.addImage(loadImage("guy.png")) 
+  player.addImage(loadImage("https://cfloresasc.github.io/pls/tennis/images.png")) 
 
 
   
