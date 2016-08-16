@@ -17,6 +17,13 @@ function setup() {
   createCanvas(1350,600);
   textSize(70);
   textAlign(CENTER, CENTER);
+  player = createSprite(30, height/2, 10, 100);
+  player.immovable = true;
+  player.addImage(loadImage("https://cfloresasc.github.io/pls/tennis/images.png")) 
+  
+  enemy = createSprite(width-28, height/2, 10, 300);
+  enemy.movable = true;
+  enemy.addImage(loadImage("https://cfloresasc.github.io/pls/tennis/images2.png"))
   
   wallTop = createSprite(width/2, -30/2, width, 30);
   wallTop.immovable = true;
@@ -28,15 +35,6 @@ function setup() {
   ball.maxSpeed = MAX_SPEED1;
   ball.shapeColor = color(255,255,255);
   ball.setSpeed(MAX_SPEED, -180);
-  back = createSprite(675, 300, 675, 300);
-  back.addImage(loadImage("https://cfloresasc.github.io/pls/tennis/tennis.jpg"))
-  player = createSprite(30, height/2, 10, 100);
-  player.immovable = true;
-  player.addImage(loadImage("https://cfloresasc.github.io/pls/tennis/images.png")) 
-  
-  enemy = createSprite(width-28, height/2, 10, 300);
-  enemy.movable = true;
-  enemy.addImage(loadImage("https://cfloresasc.github.io/pls/tennis/images2.png"))
 }
 
 function draw() {
@@ -59,6 +57,8 @@ if(game === true){
   background(3,101,100);
   text(score1, 765, 40);
   text(score, 575, 40);
+    back = createSprite(675, 300, 675, 300);
+  back.addImage(loadImage("https://cfloresasc.github.io/pls/tennis/tennis.jpg"))
   enemy.collide(wallBottom)
   player.position.y = constrain(mouseY, player.height/3, height-player.height/3);
 
