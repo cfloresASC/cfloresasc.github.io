@@ -36,7 +36,8 @@ function setup() {
   player.shapeColor = enemy.shapeColor = ball.shapeColor = color(255,255,255);
   player.immovable = true;
   player.addImage(loadImage("https://cfloresasc.github.io/pls/tennis/images.png")) 
-  
+
+
   enemy = createSprite(width-28, height/2, 10, 300);
   enemy.movable = true;
   enemy.addImage(loadImage("https://cfloresasc.github.io/pls/tennis/images2.png"))
