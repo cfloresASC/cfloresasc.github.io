@@ -207,6 +207,8 @@ if(game === true){
   		setup();
   	}
   }
+    back = createSprite(675, 300, 675, 300)
+  back.addImage(loadImage("https://cfloresasc.github.io/pls/tennis/tennis.jpg"))
  if(millis() > this.delay){
             this.choice = int(random(1,3))
             this.delay = millis() + 1000
