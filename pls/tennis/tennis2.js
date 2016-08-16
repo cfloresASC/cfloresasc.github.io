@@ -36,27 +36,6 @@ function setup() {
   ball.maxSpeed = MAX_SPEED1;
   ball.shapeColor = color(255,255,255);
   ball.setSpeed(MAX_SPEED, -180);
-
-    usa = createSprite(325,175,25,25);
-    usa.addImage(loadImage("https://wjohnson1.github.io/Olympics/usa.png"));
-    russia = createSprite(650,175,25,25);
-    russia.addImage(loadImage("https://wjohnson1.github.io/Olympics/russia.png"));
-    brazil = createSprite(975,175,25,25);
-    brazil.addImage(loadImage("https://wjohnson1.github.io/Olympics/brazil.png"));
-    china = createSprite(270,325,25,25);
-    china.addImage(loadImage("https://wjohnson1.github.io/Olympics/china.png"));
-    australia = createSprite(540,325,25,25);
-    australia.addImage(loadImage("https://wjohnson1.github.io/Olympics/australia.png"));
-    france = createSprite(810,325,25,25);
-    france.addImage(loadImage("https://wjohnson1.github.io/Olympics/france.png"));
-    germany = createSprite(1080,325,25,25);
-    germany.addImage(loadImage("https://wjohnson1.github.io/Olympics/germany.png"));
-    greatb = createSprite(325,500,25,25);
-    greatb.addImage(loadImage("https://wjohnson1.github.io/Olympics/greatb.png"));
-    italy = createSprite(650,500,25,25);
-    italy.addImage(loadImage("https://wjohnson1.github.io/Olympics/italy.png"));
-    mexico = createSprite(975,500,25,25);
-    mexico.addImage(loadImage("https://wjohnson1.github.io/Olympics/mexico.png"));
 }
 
 function draw() {
@@ -79,8 +58,6 @@ if(game === true){
   background(3,101,100);
   text(score1, 765, 40);
   text(score, 575, 40);
-  team = createSprite(675,40, 675, 40);
-  team.addImage(loadImage(yourteam));
   enemy.collide(wallBottom)
   player.position.y = constrain(mouseY, player.height/3, height-player.height/3);
 
