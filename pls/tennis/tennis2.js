@@ -18,7 +18,7 @@ function setup() {
   createCanvas(1350,600);
   textSize(70);
   textAlign(CENTER, CENTER);
-  back = createSprite(105, 350, 220, 200)
+  back = createSprite(1350, 700, 220, 200)
   back.addImage(loadImage("https://cfloresasc.github.io/pls/tennis/tennis.jpg"))
 
   player = createSprite(30, height/2, 10, 100);
@@ -49,8 +49,6 @@ function setup() {
     brazil.addImage(loadImage("https://wjohnson1.github.io/Olympics/brazil.png"))
     china = createSprite(270,325,25,25)
     china.addImage(loadImage("https://wjohnson1.github.io/Olympics/china.png"))
-    australia = createSprite(540,325,25,25)
-    australia.addImage(loadImage("https://wjohnson1.github.io/Olympics/australia.png"))
     france = createSprite(810,325,25,25)
     france.addImage(loadImage("https://wjohnson1.github.io/Olympics/france.png"))
     germany = createSprite(1080,325,25,25)
