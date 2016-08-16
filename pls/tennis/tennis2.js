@@ -18,7 +18,7 @@ function setup() {
   createCanvas(1350,600);
   textSize(70);
   textAlign(CENTER, CENTER);
-  back = createSprite(1350, 700, 220, 200)
+  back = createSprite(675, 300, 1350, 700)
   back.addImage(loadImage("https://cfloresasc.github.io/pls/tennis/tennis.jpg"))
 
   player = createSprite(30, height/2, 10, 100);
