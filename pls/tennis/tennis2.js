@@ -18,8 +18,6 @@ function setup() {
   createCanvas(1350,600);
   textSize(70);
   textAlign(CENTER, CENTER);
-  back = loadImage("https://cfloresasc.github.io/pls/tennis/tennis.jpg");
-
 
   player = createSprite(30, height/2, 10, 100);
   player.immovable = true;
