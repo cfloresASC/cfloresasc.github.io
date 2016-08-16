@@ -15,6 +15,8 @@ var homescreen = false;
 var countrymenu = true;
 var back;
 function setup() {
+  setInterval(draw, 100);
+
   createCanvas(1350,600);
   textSize(70);
   textAlign(CENTER, CENTER);
