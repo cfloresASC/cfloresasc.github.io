@@ -3,7 +3,7 @@ this.choice = 5
 
 var player;
 var MAX_SPEED = 20;
-var MAX_SPEED1 = 40;
+var MAX_SPEED1 = 50;
 var score = 0;
 var score1 = -1;
 var enemy;
@@ -54,7 +54,7 @@ function draw() {
         }
        } 
 if(game === true){
-  background(177,217,120);
+  background(113,209,97);
   text(score1, 765, 40);
   text(score, 575, 40);
   enemy.collide(wallBottom)
