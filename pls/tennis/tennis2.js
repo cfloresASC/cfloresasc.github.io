@@ -52,16 +52,6 @@ function draw() {
         text("(Be careful of her Curve Ball)",675,305);
         textSize(50);
         text("Press Spacebar to Start",675,450);
-        usa.remove();
-        russia.remove();
-        brazil.remove();
-        china.remove();
-        australia.remove();
-        france.remove();
-        germany.remove();
-        greatb.remove();
-        italy.remove();
-        mexico.remove();
          if (keyCode === 32){
             homescreen = false
             game = true
@@ -111,6 +101,7 @@ if(game === true){
   game = false;
 
   }
+}
   if (game == false){
   	textSize(70);
   	text("Press ENTER for a Rematch");
