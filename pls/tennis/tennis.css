@@ -1,13 +1,8 @@
-
-#hey{
-	font-family: 'Knewave', cursive;
-	color: black;
-	background-image: url("http://www.wakanow.com/ng/tonibraxton_babyface/img/bigbanner.jpg");
-	/* Potential backgrounds
-	http://9to5animations.com/wp-content/uploads/2016/06/rio_2016-wallpaper-1920x1080-Summer_olympics.jpg
+/* Potential backgrounds
+    http://9to5animations.com/wp-content/uploads/2016/06/rio_2016-wallpaper-1920x1080-Summer_olympics.jpg
 https://www.vectoropenstock.com/media/users/3/78220/raw/998e95f53f5c25bc69586df8b08c2bab-vinicius-rio-2016-mascot-banner.jpg
-http://windows10free.org/wp-content/uploads/2016/07/Rio-2016-olympics-mascot-hd-wallpaper.jpg	
-	*/
+http://windows10free.org/wp-content/uploads/2016/07/Rio-2016-olympics-mascot-hd-wallpaper.jpg   
+    */
 }
 /* GLOBAL STYLES
 -------------------------------------------------- */
@@ -20,7 +15,7 @@ body {
 }
 
 ul{
-		font-family: 'Knewave', cursive;
+    font-family: 'Knewave', cursive;
 
 }
 
@@ -29,8 +24,7 @@ ul{
 
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
 .navbar-brand{
-		font-family: 'Knewave', cursive;
-    Bc
+        font-family: 'Knewave', cursive;
 
 }
 .navbar-wrapper {
@@ -140,9 +134,6 @@ ul{
   .featurette-heading {
     margin-top: 120px;
   }
-
-/*Everything after this is for the loading screen*/
-
 
 
 #loader-wrapper .loader-section {
@@ -273,4 +264,3 @@ ul{
 
     }
 }
-
