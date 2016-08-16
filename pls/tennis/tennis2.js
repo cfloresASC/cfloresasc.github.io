@@ -36,7 +36,6 @@ function setup() {
   ball = createSprite(width/2, height/2, 10, 10);
   ball.maxSpeed = MAX_SPEED1;
   
-  player.shapeColor = enemy.shapeColor = ball.shapeColor = color(255,255,255);
   
   ball.setSpeed(MAX_SPEED, -180);
     usa = createSprite(325,175,25,25)
