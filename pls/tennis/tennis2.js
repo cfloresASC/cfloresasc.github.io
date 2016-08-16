@@ -18,7 +18,8 @@ function setup() {
   createCanvas(1350,600);
   textSize(70);
   textAlign(CENTER, CENTER);
-
+  back = createSprite(675, 300, 675, 300)
+  back.addImage(loadImage("https://cfloresasc.github.io/pls/tennis/tennis.jpg"))
   player = createSprite(30, height/2, 10, 100);
   player.immovable = true;
   player.addImage(loadImage("https://cfloresasc.github.io/pls/tennis/images.png")) 
@@ -63,7 +64,6 @@ function setup() {
 function draw() {
 if (countrymenu === true) {
         background(123,183,166)
-        drawSprites()
         textSize(50)
         text("Press the key under the country you want to play as",670,50)
         textSize(25)
@@ -206,8 +206,6 @@ if(game === true){
   	if(keyCode === ENTER){
   		setup();
   	}
-      back = createSprite(675, 300, 675, 300)
-  back.addImage(loadImage("https://cfloresasc.github.io/pls/tennis/tennis.jpg"))
   }
  if(millis() > this.delay){
             this.choice = int(random(1,3))
