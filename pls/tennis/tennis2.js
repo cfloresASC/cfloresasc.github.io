@@ -18,7 +18,7 @@ function setup() {
   createCanvas(1350,600);
   textSize(70);
   textAlign(CENTER, CENTER);
-  
+
   player = createSprite(30, height/2, 10, 100);
   player.immovable = true;
   player.addImage(loadImage("https://cfloresasc.github.io/pls/tennis/images.png")) 
@@ -139,20 +139,6 @@ if (countrymenu === true) {
         text("(Be careful of her Curve Ball)",675,305);
         textSize(50);
         text("Press Spacebar to Start",675,450);
-        usa.remove();
-        russia.remove();
-        brazil.remove();
-        china.remove();
-        australia.remove();
-        france.remove();
-        germany.remove();
-        greatb.remove();
-        italy.remove();
-        mexico.remove();
-         if (keyCode === 32){
-            homescreen = false
-            game = true
-        }
        } 
 if(game === true){
   background(3,101,100);
