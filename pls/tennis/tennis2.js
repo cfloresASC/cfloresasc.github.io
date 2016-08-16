@@ -60,6 +60,7 @@ function setup() {
     mexico = createSprite(975,500,25,25)
     mexico.addImage(loadImage("https://wjohnson1.github.io/Olympics/mexico.png")) 
 }
+
 function draw() {
 if (countrymenu === true) {
         background(123,183,166)
