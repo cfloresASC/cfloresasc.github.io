@@ -29,10 +29,11 @@ function setup() {
   ball = createSprite(width/2, height/2, 10, 10);
   ball.maxSpeed = MAX_SPEED1;
   
-  player.shapeColor = enemy.shapeColor = ball.shapeColor = color(255,255,255);
-    back = createSprite(675, 300, 675, 300)
+  back = createSprite(675, 300, 675, 300)
   back.addImage(loadImage("https://cfloresasc.github.io/pls/tennis/tennis.jpg"))
+  
   player = createSprite(30, height/2, 10, 100);
+  player.shapeColor = enemy.shapeColor = ball.shapeColor = color(255,255,255);
   player.immovable = true;
   player.addImage(loadImage("https://cfloresasc.github.io/pls/tennis/images.png")) 
   
