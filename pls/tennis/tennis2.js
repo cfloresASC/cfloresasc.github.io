@@ -12,7 +12,6 @@ var wallTop;
 var wallBottom;
 var game = false;
 var homescreen = false;
-var countrymenu = true;
 var back;
 function setup() {
   createCanvas(1350,600);
@@ -43,7 +42,7 @@ function setup() {
 }
 
 function draw() {
-  if (homescreen === true) {
+  if (homescreen === false) {
         background(128,188,163);
         textSize(50);
         fill(255,255,255);
@@ -53,16 +52,6 @@ function draw() {
         text("(Be careful of her Curve Ball)",675,305);
         textSize(50);
         text("Press Spacebar to Start",675,450);
-        usa.remove();
-        russia.remove();
-        brazil.remove();
-        china.remove();
-        australia.remove();
-        france.remove();
-        germany.remove();
-        greatb.remove();
-        italy.remove();
-        mexico.remove();
          if (keyCode === 32){
             homescreen = false
             game = true
