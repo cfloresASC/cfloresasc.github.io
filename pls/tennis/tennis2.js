@@ -19,13 +19,6 @@ function setup() {
   textSize(70);
   textAlign(CENTER, CENTER);
 
-  player = createSprite(30, height/2, 10, 100);
-  player.immovable = true;
-  player.addImage(loadImage("https://cfloresasc.github.io/pls/tennis/images.png")) 
-  
-  enemy = createSprite(width-28, height/2, 10, 300);
-  enemy.movable = true;
-  enemy.addImage(loadImage("https://cfloresasc.github.io/pls/tennis/images2.png"))
   
   wallTop = createSprite(width/2, -30/2, width, 30);
   wallTop.immovable = true;
@@ -39,7 +32,13 @@ function setup() {
   player.shapeColor = enemy.shapeColor = ball.shapeColor = color(255,255,255);
     back = createSprite(675, 300, 675, 300)
   back.addImage(loadImage("https://cfloresasc.github.io/pls/tennis/tennis.jpg"))
+  player = createSprite(30, height/2, 10, 100);
+  player.immovable = true;
+  player.addImage(loadImage("https://cfloresasc.github.io/pls/tennis/images.png")) 
   
+  enemy = createSprite(width-28, height/2, 10, 300);
+  enemy.movable = true;
+  enemy.addImage(loadImage("https://cfloresasc.github.io/pls/tennis/images2.png"))
   ball.setSpeed(MAX_SPEED, -180);
     usa = createSprite(325,175,25,25)
     usa.addImage(loadImage("https://wjohnson1.github.io/Olympics/usa.png"))
