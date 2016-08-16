@@ -39,6 +39,8 @@ function setup() {
 
 function draw() {
   if (homescreen === true) {
+      back = createSprite(675, 300, 675, 300);
+  back.addImage(loadImage("https://cfloresasc.github.io/pls/tennis/tennis.jpg"))
         background(128,188,163);
         textSize(50);
         fill(255,255,255);
@@ -57,8 +59,6 @@ if(game === true){
   background(3,101,100);
   text(score1, 765, 40);
   text(score, 575, 40);
-    back = createSprite(675, 300, 675, 300);
-  back.addImage(loadImage("https://cfloresasc.github.io/pls/tennis/tennis.jpg"))
   enemy.collide(wallBottom)
   player.position.y = constrain(mouseY, player.height/3, height-player.height/3);
 
@@ -118,7 +118,6 @@ if(game === true){
         }
     	enemy.setSpeed(5,angle);   
    enemy.overlap(wallBottom)
-
   enemy.collide(wallTop);
   drawSprites();
   }
