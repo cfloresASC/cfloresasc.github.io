@@ -11,7 +11,7 @@ var ball;
 var wallTop;
 var wallBottom;
 var game = false;
-var homescreen = false;
+var homescreen = true;
 function setup() {
   createCanvas(1350,600);
   textSize(70);
