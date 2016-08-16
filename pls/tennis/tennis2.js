@@ -54,7 +54,7 @@ function draw() {
         }
        } 
 if(game === true){
-  background(3,101,100);
+  background(177,217,120);
   text(score1, 765, 40);
   text(score, 575, 40);
   enemy.collide(wallBottom)
