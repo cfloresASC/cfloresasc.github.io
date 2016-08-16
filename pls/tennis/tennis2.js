@@ -39,8 +39,6 @@ function setup() {
 
 function draw() {
   if (homescreen === true) {
-      back = createSprite(675, 300, 675, 300);
-  back.addImage(loadImage("https://cfloresasc.github.io/pls/tennis/tennis.jpg"))
         background(128,188,163);
         textSize(50);
         fill(255,255,255);
