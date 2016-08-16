@@ -2,7 +2,7 @@ this.delay = 0
 this.choice = 5
 
 var player;
-var MAX_SPEED = 10;
+var MAX_SPEED = 20;
 var MAX_SPEED1 = 40;
 var score = 0;
 var score1 = -1;
@@ -13,16 +13,17 @@ var wallBottom;
 var game = false;
 var homescreen = false;
 var countrymenu = true;
+var back;
 function setup() {
   createCanvas(1350,600);
   textSize(70);
   textAlign(CENTER, CENTER);
+  back = createSprite(675, 350, 1350, 700)
+  back.addImage(loadImage("#"))
 
   player = createSprite(30, height/2, 10, 100);
   player.immovable = true;
   player.addImage(loadImage("https://cfloresasc.github.io/pls/tennis/images.png")) 
-
-
   
   enemy = createSprite(width-28, height/2, 10, 300);
   enemy.movable = true;
