@@ -64,8 +64,6 @@ function draw() {
 if (countrymenu === true) {
         background(123,183,166)
         drawSprites()
-          back = createSprite(675, 300, 675, 300)
-          back.addImage(loadImage("https://cfloresasc.github.io/pls/tennis/tennis.jpg"))
         textSize(50)
         text("Press the key under the country you want to play as",670,50)
         textSize(25)
