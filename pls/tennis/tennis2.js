@@ -11,8 +11,7 @@ var ball;
 var wallTop;
 var wallBottom;
 var game = false;
-var homescreen = false;
-var countrymenu = true;
+var homescreen = true;
 var back;
 function setup() {
   createCanvas(1350,600);
@@ -61,24 +60,6 @@ function setup() {
 }
 
 function draw() {
-if (countrymenu === true) {
-        background(123,183,166)
-        drawSprites()
-        textSize(50)
-        text("Press the key under the country you want to play as",670,50);
-        textSize(25);
-        text("0",320,225);
-        text("1",645,225);
-        text("2",970,225);
-        text("3",265,375);
-        text("4",535,375);
-        text("5",805,375);
-        text("6",1075,375);
-        text("7",320,550);
-        text("8",645,550);
-        text("9",970,550);                                                                   
-    }
-
   if (homescreen === true) {
         background(128,188,163);
         textSize(50);
