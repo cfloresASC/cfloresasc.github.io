@@ -42,27 +42,10 @@ function setup() {
 }
 
 function draw() {
-  if (homescreen === false) {
-        background(128,188,163);
-        textSize(50);
-        fill(255,255,255);
-        text("Can You Beat Serena Williams?", 675,100);
-        text("Press Enter to Play",675,250);
-        textSize(25);
-        text("(Be careful of her Curve Ball)",675,305);
-        textSize(50);
-        text("Press Spacebar to Start",675,450);
-         if (keyCode === 32){
-            homescreen = false
-            game = true
-        }
-       } 
 if(game === true){
   background(3,101,100);
   text(score1, 765, 40);
   text(score, 575, 40);
-  team = createSprite(675,40, 675, 40);
-  team.addImage(loadImage(yourteam));
   enemy.collide(wallBottom)
   player.position.y = constrain(mouseY, player.height/3, height-player.height/3);
 
