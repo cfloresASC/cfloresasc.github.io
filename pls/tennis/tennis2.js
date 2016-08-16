@@ -49,6 +49,8 @@ function setup() {
     brazil.addImage(loadImage("https://wjohnson1.github.io/Olympics/brazil.png"))
     china = createSprite(270,325,25,25)
     china.addImage(loadImage("https://wjohnson1.github.io/Olympics/china.png"))
+    australia = createSprite(540,325,25,25)
+    australia.addImage(loadImage("https://wjohnson1.github.io/Olympics/australia.png"))
     france = createSprite(810,325,25,25)
     france.addImage(loadImage("https://wjohnson1.github.io/Olympics/france.png"))
     germany = createSprite(1080,325,25,25)
