@@ -155,8 +155,6 @@ if (countrymenu === true) {
         }
        } 
 if(game === true){
-    back = createSprite(675, 300, 675, 300)
-  back.addImage(loadImage("https://cfloresasc.github.io/pls/tennis/tennis.jpg"))
   background(3,101,100);
   text(score1, 765, 40)
   text(score, 575, 40);
@@ -208,6 +206,8 @@ if(game === true){
   	if(keyCode === ENTER){
   		setup();
   	}
+      back = createSprite(675, 300, 675, 300)
+  back.addImage(loadImage("https://cfloresasc.github.io/pls/tennis/tennis.jpg"))
   }
  if(millis() > this.delay){
             this.choice = int(random(1,3))
