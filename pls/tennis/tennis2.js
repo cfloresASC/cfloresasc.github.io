@@ -19,7 +19,6 @@ function setup() {
   textSize(70);
   textAlign(CENTER, CENTER);
 
-
   player = createSprite(30, height/2, 10, 100);
   player.immovable = true;
   player.addImage(loadImage("https://cfloresasc.github.io/pls/tennis/images.png")) 
@@ -164,7 +163,8 @@ if(game === true){
   team.addImage(loadImage(yourteam));
   enemy.collide(wallBottom)
   player.position.y = constrain(mouseY, player.height/3, height-player.height/3);
-
+    back = createSprite(675, 300, 675, 300)
+  back.addImage(loadImage("https://cfloresasc.github.io/pls/tennis/tennis.jpg"))
   ball.bounce(wallTop);
   ball.bounce(wallBottom);
   enemy.attractionPoint(0.2, mouseX, mouseY)
@@ -198,7 +198,7 @@ if(game === true){
   }
   if (score1===12){
   
-  text("Serena Williams Wins!", width/2, 160);
+  text("Rival Wins!", width/2, 160);
   game = false;
 
   }
@@ -221,8 +221,6 @@ if(game === true){
         }
     	enemy.setSpeed(5,angle);   
    enemy.overlap(wallBottom)
-     back = createSprite(675, 300, 675, 300)
-  back.addImage(loadImage("https://cfloresasc.github.io/pls/tennis/tennis.jpg"))
 
   enemy.collide(wallTop);
   drawSprites();
