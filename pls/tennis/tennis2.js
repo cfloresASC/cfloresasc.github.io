@@ -15,15 +15,15 @@ var homescreen = false;
 var countrymenu = true;
 var back;
 function setup() {
-  setInterval(draw, 100);
-
   createCanvas(1350,600);
   textSize(70);
   textAlign(CENTER, CENTER);
+  back = loadImage("https://cfloresasc.github.io/pls/tennis/tennis.jpg");
+
 
   player = createSprite(30, height/2, 10, 100);
   player.immovable = true;
-  player.addImage(loadImage("https://cfloresasc.github.io/pls/tennis/images.png")) 
+  player.addImage(loadImage("https://cfloresasc.github.io/pls/tennis/images.png")); 
   
   enemy = createSprite(width-28, height/2, 10, 300);
   enemy.movable = true;
