@@ -54,6 +54,8 @@ function draw() {
         }
        } 
 if(game === true){
+    back = createSprite(675, 300, 675, 300);
+  back.addImage(loadImage("https://cfloresasc.github.io/pls/tennis/tennis.jpg"))
   background(3,101,100);
   text(score1, 765, 40);
   text(score, 575, 40);
@@ -63,8 +65,6 @@ if(game === true){
   ball.bounce(wallTop);
   ball.bounce(wallBottom);
   enemy.attractionPoint(0.2, mouseX, mouseY);
-  back = createSprite(675, 300, 675, 300);
-  back.addImage(loadImage("https://cfloresasc.github.io/pls/tennis/tennis.jpg"))
   if(ball.bounce(player)) {
     var swing = (ball.position.y-player.position.y)/100;
     ball.setSpeed(MAX_SPEED, ball.getDirection()+swing);
