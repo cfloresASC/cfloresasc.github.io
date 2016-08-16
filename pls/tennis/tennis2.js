@@ -76,57 +76,7 @@ if (countrymenu === true) {
         text("6",1075,375);
         text("7",320,550);
         text("8",645,550);
-        text("9",970,550);
-        if (keyDown(48)) {
-            countrymenu = false
-            homescreen = true
-            yourteam = "https://cfloresasc.github.io/pls/tennis/usa.png"
-        }
-        if (keyDown(49)) {
-            countrymenu = false
-            homescreen = true
-            yourteam = "https://cfloresasc.github.io/pls/tennis/russia.png"
-        }
-        if (keyDown(50)) {
-            countrymenu = false
-            homescreen = true
-            yourteam = "https://cfloresasc.github.io/pls/tennis/brazil.png"
-        }
-        if (keyDown(51)) {
-            countrymenu = false
-            homescreen = true
-            yourteam = "https://cfloresasc.github.io/pls/tennis/china.png"
-        }
-        if (keyDown(52)) {
-            countrymenu = false
-            homescreen = true
-            yourteam = "https://cfloresasc.github.io/pls/tennis/australia.png"
-        }
-        if (keyDown(53)) {
-            countrymenu = false
-            homescreen = true
-            yourteam = "https://cfloresasc.github.io/pls/tennis/france.png"
-        }
-        if (keyDown(54)) {
-            countrymenu = false
-            homescreen = true
-            yourteam = "https://cfloresasc.github.io/pls/tennis/germany.png"
-        }
-        if (keyDown(55)) {
-            countrymenu = false
-            homescreen = true
-            yourteam = "https://cfloresasc.github.io/pls/tennis/greatb.png"
-        }
-        if (keyDown(56)) {
-            countrymenu = false
-            homescreen = true
-            yourteam = "https://cfloresasc.github.io/pls/tennis/italy.png"
-        }
-        if (keyDown(57)) {
-            countrymenu = false
-            homescreen = true
-            yourteam = "https://cfloresasc.github.io/pls/tennis/mexico.png"
-        }                                                                        
+        text("9",970,550);                                                                   
     }
 
   if (homescreen === true) {
@@ -139,6 +89,10 @@ if (countrymenu === true) {
         text("(Be careful of her Curve Ball)",675,305);
         textSize(50);
         text("Press Spacebar to Start",675,450);
+         if (keyCode === 32){
+            homescreen = false
+            game = true
+        }
        } 
 if(game === true){
   background(3,101,100);
