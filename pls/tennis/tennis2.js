@@ -3,7 +3,7 @@ this.choice = 5
 
 var player;
 var MAX_SPEED = 20;
-var MAX_SPEED1 = 50;
+var MAX_SPEED1 = 40;
 var score = 0;
 var score1 = -1;
 var enemy;
@@ -106,7 +106,7 @@ if(game === true){
   }
  if(millis() > this.delay){
             this.choice = int(random(1,3))
-            this.delay = millis() + 1000
+            this.delay = millis() + 700
         }
         if(this.choice === 1){
             angle = 90
