@@ -42,8 +42,8 @@ function draw() {
         background(128,188,163);
         textSize(50);
         fill(255,255,255);
-        text("Can You Beat Serena Williams?", 675,100);
-        text("Press Enter to Play",675,250);
+        text("Can You Beat the best Tennis Player in the competition?", 675,100);
+        text("Use the mouse to guide your player to victory",675,250);
         textSize(25);
         text("(Be careful of her Curve Ball)",675,305);
         textSize(50);
