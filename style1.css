@@ -1,0 +1,124 @@
+
+p {
+	/*border: solid;
+	border-width: thin;
+	border-color: #AED6F1;*/
+	text-align: left;
+	border-radius: 5px;
+	font-size: 1rem;
+	font-family: "Poiret One", cursive;
+	cursor:pointer;
+}
+body{
+	border: 4px solid #eee;
+	border-radius: 2px;
+	border-color: black;
+	background-image: url("http://wallpapercave.com/wp/WShsIJl.jpg");
+	 border-bottom: 1005px ridge;
+/* or how longer you want */
+	}
+
+h1{
+	font-family: "Poiret One", cursive;
+}
+
+h2{
+	font-family: "Poiret One", cursive;
+}
+h3{
+	font-size: 1rem;
+}
+
+h3{
+	text-align: top;
+	font-size: 2rem;
+}
+h4{
+	font-size: 2rem;
+
+}
+#aboutme1{
+	font-size: 2rem;
+}
+#aboutme2{
+	font-size: 2rem;
+}
+img{
+	width: 50px;
+}
+
+p {display: block;width: 210px;
+}
+
+p:hover { 
+    background-color: #F2F3F4;
+
+}
+
+li {
+	display: block;width: 80px;
+	border-radius: 5px;
+
+
+}
+li:hover {
+	background-color: #F2F3F4;
+}
+li {
+	/*border: solid;
+	border-width: thin;
+	border-color: #AED6F1;*/
+	font-size: 2em;
+	text-align: left;
+	font-family: "Poiret One", cursive;
+	cursor: pointer;
+
+}
+#projects{
+	font-size: 10rem;
+	font-family: "Poiret One", cursive;
+
+}
+
+.pic-round-corner {
+	display: block;
+	width: 200px;
+	height: 200px;
+	margin: .8em auto;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	border: 5px solid #eee;
+	box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Pen-specific styles */
+html, body, section, div {
+  height: 70vh;
+}
+
+
+article {
+  position: relative;
+  top: 70%;
+  text-align: center;
+  transform: translate(0, -50%);
+  padding: 1rem;
+
+}
+h2 {
+	font-size: 1rem;
+	text-align: left;
+
+}
+h1 {
+  font-size: 5rem;
+  margin: 0 0 0.75rem 0;
+}
+
+.bottom-half{
+	background-image:url("http://4globetrotters.world/wp-content/uploads/2015/08/Light-Grey-Background.jpg");
+}
