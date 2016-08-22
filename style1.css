@@ -46,6 +46,9 @@ ul{
   letter-spacing: -1px;
 }
 
+h1{
+	    font-family: 'Knewave', cursive;
+}
 
 @media (min-width: 768px) {
   .navbar-wrapper {
