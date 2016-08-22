@@ -89,9 +89,9 @@ h1{
 span.icon:before { 
   font-family: 'Glyphicons Halflings'; 
   content: "\f015"; 
-  left: 100px;
-  top: 150px;
+  text-align: center;
 }
 .glyphicon {
     font-size: 100px;
+    text-align: center;
 }
