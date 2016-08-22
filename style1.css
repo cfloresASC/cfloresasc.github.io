@@ -47,7 +47,7 @@ ul{
 }
 
 h1{
-	    font-family: 'Knewave', cursive;
+	 font-family: 'Knewave', cursive;
 }
 
 @media (min-width: 768px) {
@@ -85,4 +85,8 @@ h1{
   .featurette-heading {
     margin-top: 120px;
   }
+}
+span.icon:before { 
+  font-family: 'Glyphicons Halflings'; 
+  content: "\f015"; 
 }
