@@ -90,3 +90,6 @@ span.icon:before {
   font-family: 'Glyphicons Halflings'; 
   content: "\f015"; 
 }
+.glyphicon {
+    font-size: 50px;
+}
