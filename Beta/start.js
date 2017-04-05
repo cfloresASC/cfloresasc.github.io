@@ -73,6 +73,7 @@ function setup() {
   wall = createSprite(.5, .5, 2000, 1);
   wall.shapeColor = color(0, 0, 255);
   player = createSprite(width/2,height/2,15,15);
+  player.shapeColor(255);
   coins.shapeColor = color(0,255,0);
 }
 //This part makes the player move with the keys
