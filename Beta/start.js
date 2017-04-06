@@ -82,7 +82,7 @@ function setup() {
   wall = createSprite(.5, .5, 2000, 1);
   wall.shapeColor = color(0, 0, 255);
   player = createSprite(width/2,height/2,15,15);
-  player.shapeColor = color(255);
+  player.addImage(loadImage("https://cfloresasc.github.io/pls/tennis/images.png")) 
   coins.shapeColor = color(0,255,0);
 }
 //Make a moving wall back and forth. use collide
