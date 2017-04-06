@@ -71,7 +71,7 @@ function setup() {
   }
 
   //Sets the positin of the walls (borders of the field) so that the player cannot escape
-  wall5 = createSprite(200, 300, 10, 500);
+  wall5 = createSprite(200, 300, 10, 400);
   wall5.shapeColor = color(200, 0, 200);
   wall4 = createSprite(500, 599, 1000, 1);
   wall4.shapeColor = color(0, 0, 255);
