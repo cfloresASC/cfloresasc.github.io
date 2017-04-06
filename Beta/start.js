@@ -10,10 +10,15 @@ var box3;
 var box4;
 var boxImg;
 var power;
+var move;
+var x;
 var homescreen = true;
 var game = false;
+// function preload() {
+//   box.addImage(loadImage("https://cfloresasc.github.io/pls/tennis/images.png")) 
 
-
+ 
+// }
 function setup() {
   createCanvas(1000, 600);
   coins = new Group();
@@ -25,9 +30,11 @@ function setup() {
   wall2 = new Group();
   wall3 = new Group();
   wall4 = new Group();
+  wall5 = new Group();
   power = new Group();
-  game = false
-  homescreen = true
+  move = true;
+  // box.addImage(loadImage("box")) 
+//Enemies
   for (var i = 0; i < 10; i++) {
   var b = createSprite(random(20, width-300), random(0, height-300), 10, 10);
   b.shapeColor = color(255,0,255);
@@ -50,7 +57,7 @@ function setup() {
 }
  for (var i = 0; i < 10; i++) {
   var b = createSprite(random(20, width-100), random(0, height-100), 5, 5);
-  b.shapeColor = color(0,0,255);
+  b.shapeColor = color(0,250,0);
   power.add(b);
 }
 
@@ -64,93 +71,95 @@ function setup() {
   }
 
   //Sets the positin of the walls (borders of the field) so that the player cannot escape
+  wall5 = createSprite(200, 300, 10, 500);
+  wall5.shapeColor = color(200, 0, 200);
   wall4 = createSprite(500, 599, 1000, 1);
   wall4.shapeColor = color(0, 0, 255);
-  wall3 = createSprite(1000, 100, 1, 1000);
+  wall3 = createSprite(1000, 100, 1, 999);
   wall3.shapeColor = color(0, 0, 255);
   wall2 = createSprite(.5, .5, 1, 2000);
   wall2.shapeColor = color(0, 0, 255);
   wall = createSprite(.5, .5, 2000, 1);
   wall.shapeColor = color(0, 0, 255);
   player = createSprite(width/2,height/2,15,15);
-  player.shapeColor = color(255, 255,255);
+  player.shapeColor = color(255);
   coins.shapeColor = color(0,255,0);
 }
+//Make a moving wall back and forth. use collide
 //This part makes the player move with the keys
 function draw(){
-// COPY FROM HERE
-if (homescreen === true){
-  background(0);
-  textSize(50);
-  fill(255);
-  text("Press spacebar to start", 250, 300);
-  if (keyCode === 32){
-    homescreen = false
-    game = true
+  if (homescreen === true){
+    background(0,0,0);
+    textSize(50);
+    fill(255);
+    text("Press Spacebar to Start", 250, 300);
+    if (keyCode === 32){
+      homescreen = false
+      game = true
+    }
   }
-}
-// HERE TOO BUT DONT FORGET TO PUT BRACKET AT THE BOTTOM AS WELL
+  if (game === true){
+  background(50);
+  textSize(70);
+  fill(255,0,0)
+  textAlign(CORNER, CORNER);
 
-if (game === true){
-
-    background(0,0,0)
-    textSize(50)
-    fill(255,255,255)
-    text("Press Space To Start", 250, 300)
-    background(50);
-    textSize(70);
-    fill(255,0,0)
-    textAlign(CORNER, CORNER);
 //Player to collide with only the enemies
 //if enemy hits player than game over appears
-//bottom wall
-
+  if(player.collide(wall5)){
+    noLoop();
+    text("Game Over", width/3, height/2.5);
+  }
+  if(wall5.collide(wall3)){
+    wall5.setSpeed(3,180);
+  }
+  if(wall5.collide(wall2)){
+    wall5.setSpeed(3,0);
+  }
   if(player.collide(wall4)){
     noLoop();
     text("Game Over", width/3, height/2.5);
-    game === false;
+    //player.setSpeed (0,0)
   }
   if(player.collide(wall3)){
     noLoop();
     text("Game Over", width/3, height/2.5);
-    game = false;
+    //player. setSpeed (0,0)
   }
   if(player.collide(wall2)){
     noLoop();
     text("Game Over", width/3, height/2.5);
-    game = false;
+    //player. setSpeed (0,0)
   }
   if(player.collide(wall)){
     noLoop();
     text("Game Over", width/3, height/2.5);
-    game = false;
+    //player.setSpeed(0,0)
   }
   if(player.collide(box)){
     noLoop();
     text("Game Over", width/3, height/2.5);
-    game = false;
   }
   if(player.collide(box2)){
     noLoop();
     text("Game Over", width/3, height/2.5);
-    game = false;
   }
   if(player.collide(box3)){
     noLoop();
     text("Game Over", width/3, height/2.5);
-    game = false;
   }
   if(player.collide(box4)){
     noLoop();
     text("Game Over", width/3, height/2.5);
-    game = false;
   }
   if (coins.length > 0){
   text(score, width/2, height/2)
   }
-  if(keyDown(32)){
-  player.setSpeed(0, 0)
-   } 
+   if(keyDown(32)){
+   player.setSpeed(0, 0);
+   wall5.setSpeed(3,0);
+ }
+
  if (keyDown(87) && keyDown(65)){
     player.setSpeed(4, 225);
   }
@@ -203,7 +212,9 @@ if (game === true){
    for (var i = 0; i < box.length; i++) {
     box4[i].attractionPoint(.01, 700, 450);
   }
-
+   for (var i = 0; i < wall5.length; i++) {
+    wall5[i].attractionPoint(.01, width/2, height/2);
+  }
   //Overlap=If player overlaps with object it activates the function "getCoin" adding on to the score
   //makes the coin dissapear
   player.overlap(power, getPower);
@@ -211,8 +222,6 @@ if (game === true){
   player.overlap(box);
   player.overlap(wall);
   drawSprites();
-}
-
 }
 //Adds on to coin count and removes coin once overlap is set
 function getCoin(player, coin) {
@@ -222,47 +231,15 @@ function getCoin(player, coin) {
 function getPower(player, power) {
   power.remove();
   if(player.collide(power)){
-    player.setSpeed(10);
-  }
-  function restart(){
-    if (game === false && homescreen === false) {
-      fill(0)
-      textSize(50)
-      text("Play Again?", 200, 150)
-      textSize(25)
-      text("Press R to Restart", 300, 250)
-      if (keyCode === 82){
-        player.remove()
-        box.remove()
-        coins.remove()
-        setup()
-        homescreen = false 
-        game = true
-        draw();
-      }
-
-    }
+    player.setSpeed(30);
   }
 }
-// function die(){
-//   updateSprites(false);
-//   gameOver = true;
-// }
-// function newGame(){
-//   gameOver = false;
-//   updateSprites = true;
-// }
-// function mousePressed(){
-//   if(gameOver)
-//     newGame();
-// }
-
-
+}
 //  if(keyDown(82)) { location.reload(); }
 //var gameState = "startScreen", if (gameState=="startScreen") { // show the start Screen } else if (gameState=="gameInProgress") 
 //{ // game code goes here } else if (gameState=="endScreen") { // show endscreen }
 
 //SPAWN COINS ONE BY ONE> WHEN ONE IS COLLECTED, ANOTHER SPAWNS, AFTER 5 COINS, MORE ENIMIES SPAWN. POINT BASED
-
-
-// http://p5play.molleindustria.org/examples/index.html?fileName=flappyBird.js
+//Reload button
+//power ups
+//
