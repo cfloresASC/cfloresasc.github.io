@@ -235,7 +235,7 @@ function getCoin(player, coin) {
 function getPower(player, power) {
   power.remove();
   if(player.collide(power)){
-    player.setSpeed(30);
+    player.setSpeed(15);
   }
 }
 }
