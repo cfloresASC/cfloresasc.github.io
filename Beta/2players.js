@@ -26,6 +26,8 @@ function setup() {
   wall.shapeColor = color(0, 0, 255);
   player = createSprite(width/2,height/2,15,15);
   player.shapeColor = color(255);
+  player.addImage(loadImage("https://raw.githubusercontent.com/cfloresASC/cfloresasc.github.io/master/Beta/box.png"))
+
   coins.shapeColor = color(0,255,0)
   box.shapeColor = color(255, 250, 0);
 }
