@@ -36,7 +36,6 @@ function draw(){
   textSize(70);
   textAlign(CORNER, CORNER);
   if(keyDown(32)){
-    player.setSpeed(0, 0)
     box.setSpeed(0, 0)
   }
   if(player.collide(wall4)){
