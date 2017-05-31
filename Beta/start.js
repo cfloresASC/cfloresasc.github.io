@@ -19,6 +19,10 @@ var b;
 function setup() {
   createCanvas(1000, 600);
   coins = new Group();
+  b = new Group();
+  b2 = new Group();
+  b3 = new Group();
+  b4 = new Group();
   box = new Group();
   box2 = new Group();
   box3 = new Group();
@@ -36,21 +40,29 @@ function setup() {
   var b = createSprite(random(20, width-300), random(0, height-300), 10, 10);
   b.shapeColor = color(255,0,255);
   box.add(b);
+  b.addImage(loadImage("https://raw.githubusercontent.com/cfloresASC/cfloresasc.github.io/master/Beta/medium.png"))
+
 }
 
   for (var i = 0; i < 10; i++) {
   var b2 = createSprite(random(20, width-100), random(0, height-100), 10, 10);
   b2.shapeColor = color(255,0,255);
   box2.add(b2);
+  b2.addImage(loadImage("https://raw.githubusercontent.com/cfloresASC/cfloresasc.github.io/master/Beta/medium.png"))
+
 }
   for (var i = 0; i < 10; i++) {
   var b3 = createSprite(random(20, width-100), random(0, height-100), 10, 10);
   b3.shapeColor = color(255,0,255);
   box3.add(b3);
+  b3.addImage(loadImage("https://raw.githubusercontent.com/cfloresASC/cfloresasc.github.io/master/Beta/medium.png"))
+
 }  for (var i = 0; i < 10; i++) {
   var b4 = createSprite(random(20, width-100), random(0, height-100), 10, 10);
   b4.shapeColor = color(255,0,255);
   box4.add(b4);
+  b4.addImage(loadImage("https://raw.githubusercontent.com/cfloresASC/cfloresasc.github.io/master/Beta/medium.png"))
+
 }
  for (var i = 0; i < 10; i++) {
   var p = createSprite(random(20, width-100), random(0, height-100), 5, 5);
@@ -65,6 +77,8 @@ function setup() {
   var c = createSprite(random(20, width-100), random(20, height-100), 10, 10);
   c.shapeColor = color(255,255, 0);
   coins.add(c);
+  c.addImage(loadImage("https://raw.githubusercontent.com/cfloresASC/cfloresasc.github.io/master/Beta/gif.gif"))
+
   }
 
   //Sets the positin of the walls (borders of the field) so that the player cannot escape
@@ -81,12 +95,6 @@ function setup() {
   player = createSprite(width/2,height/2,15,15);
   player.shapeColor = color(255);
   player.addImage(loadImage("https://raw.githubusercontent.com/cfloresASC/cfloresasc.github.io/master/Beta/box.png"))
-  b.addImage(loadImage("https://raw.githubusercontent.com/cfloresASC/cfloresasc.github.io/master/Beta/medium.png"))
-  b2.addImage(loadImage("https://raw.githubusercontent.com/cfloresASC/cfloresasc.github.io/master/Beta/medium.png"))
-  b3.addImage(loadImage("https://raw.githubusercontent.com/cfloresASC/cfloresasc.github.io/master/Beta/medium.png"))
-  b4.addImage(loadImage("https://raw.githubusercontent.com/cfloresASC/cfloresasc.github.io/master/Beta/medium.png"))
-  c.addImage(loadImage("https://raw.githubusercontent.com/cfloresASC/cfloresasc.github.io/master/Beta/gif.gif"))
-
   coins.shapeColor = color(0,255,0);
 }
 //Make a moving wall back and forth. use collide
