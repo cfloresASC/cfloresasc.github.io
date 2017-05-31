@@ -17,6 +17,10 @@ var game = false;
 var b;
 function setup() {
   createCanvas(1000, 600);
+  background(50);
+    back = createSprite(500, 300, 1350, 500)
+back.shapeColor = color(0,255,0)
+back.addImage(loadImage("https://raw.githubusercontent.com/cfloresASC/cfloresasc.github.io/master/Beta/floor1.png"))
   coins = new Group();
   b = new Group();
   b2 = new Group();
@@ -119,7 +123,8 @@ function draw(){
 //if enemy hits player than game over appears
   if(player.collide(wall5)){
     noLoop();
-    text("Game Over", width/3, height/2.5);
+    textSize(30);
+    text("Game Over", 800, 40);
   }
   if(wall5.collide(wall3)){
     wall5.setSpeed(3,180);
@@ -129,42 +134,56 @@ function draw(){
   }
   if(player.collide(wall4)){
     noLoop();
-    text("Game Over", width/3, height/2.5);
+    textSize(30);
+    text("Game Over", 800, 40);
     //player.setSpeed (0,0)
   }
   if(player.collide(wall3)){
     noLoop();
-    text("Game Over", width/3, height/2.5);
+    textSize(30);
+    text("Game Over", 800, 40);
     //player. setSpeed (0,0)
   }
   if(player.collide(wall2)){
     noLoop();
-    text("Game Over", width/3, height/2.5);
+        textSize(30);
+    text("Game Over", 800, 40);
+
     //player. setSpeed (0,0)
   }
   if(player.collide(wall)){
     noLoop();
-    text("Game Over", width/3, height/2.5);
+        textSize(30);
+    text("Game Over", 800, 40);
+
     //player.setSpeed(0,0)
   }
   if(player.collide(box)){
     noLoop();
-    text("Game Over", width/3, height/2.5);
+        textSize(30);
+    text("Game Over", 800, 40);
+
   }
   if(player.collide(box2)){
     noLoop();
-    text("Game Over", width/3, height/2.5);
+        textSize(30);
+    text("Game Over", 800, 40);
+
   }
   if(player.collide(box3)){
     noLoop();
-    text("Game Over", width/3, height/2.5);
+        textSize(30);
+    text("Game Over", 800, 40);
+
   }
   if(player.collide(box4)){
     noLoop();
-    text("Game Over", width/3, height/2.5);
+        textSize(30);
+    text("Game Over", 800, 40);
+
   }
   if (coins.length > 0){
-  text(score, width/2, height/2)
+  text(score, 870, 70)
   }
    if(keyDown(32)){
    player.setSpeed(0, 0);
@@ -209,7 +228,8 @@ function draw(){
   }
   else{ 
     noLoop();
-    text("Congrats", width/3, height/2);
+    textSize(30);
+    text("Congrats", 820, 40);
   } //the c in congrats is the only one in the center screen. make it so that the middle of congrats is in middle screen
    for (var i = 0; i < box.length; i++) {
     box[i].attractionPoint(.01, 700, 150);
