@@ -17,6 +17,8 @@ var game = false;
 var b;
 
 function setup() {
+  // bgImg = loadImage("http://orig09.deviantart.net/80e1/f/2011/284/6/8/kjellvaders___space_scenery_by_johanz-d4cim0g.png")
+
   createCanvas(1000, 600);
   coins = new Group();
   b = new Group();
@@ -68,6 +70,7 @@ function setup() {
   var p = createSprite(random(20, width-100), random(0, height-100), 5, 5);
   p.shapeColor = color(0,250,0);
   power.add(p);
+  p.addImage(loadImage("https://raw.githubusercontent.com/cfloresASC/cfloresasc.github.io/master/Beta/boot.png"))
 }
 
 
@@ -84,6 +87,8 @@ function setup() {
   //Sets the positin of the walls (borders of the field) so that the player cannot escape
   wall5 = createSprite(200, 300, 10, 400);
   wall5.shapeColor = color(200, 0, 200);
+  wall5.addImage(loadImage("https://raw.githubusercontent.com/cfloresASC/cfloresasc.github.io/master/Beta/wall.png"))
+
   wall4 = createSprite(500, 599, 1000, 1);
   wall4.shapeColor = color(0, 0, 255);
   wall3 = createSprite(1000, 100, 1, 999);
