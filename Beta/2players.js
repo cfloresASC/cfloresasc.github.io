@@ -14,7 +14,7 @@ function setup() {
   wall3 = new Group();
   wall4 = new Group();
   box = createSprite(width/5, width/5, 10, 10);
-  for (var i = 0; i < 100; i++) {
+  for (var i = 0; i < 1; i++) {
   var c = createSprite(random(0, width-10), random(0, height-10), 10, 10);
   c.shapeColor = color(255,255, 0);
   coins.add(c);
@@ -72,11 +72,12 @@ function draw(){
   }     
   if(player.collide(box)){
     noLoop();
-    text("Player 2 Wins", width/3, height/2.5);
+    textSize(30);
+    text("Player 2 Wins", 800, 40);
   }
-  if (coins.length > 0){
-  text(score, 870, 70)
-  }
+  // if (coins.length > 0){
+  // text(score, 870, 90)
+  // }
   if (keyDown(UP_ARROW)){
     box.setSpeed(10, 270);  
   }
@@ -106,7 +107,8 @@ function draw(){
   }
   else{
     noLoop();
-    text("Player 1 Wins", width/2, height/2);
+    textSize(30);
+    text("Player 1 Wins", 800, 70);
   }
   player.overlap(coins, getCoin);
   drawSprites();

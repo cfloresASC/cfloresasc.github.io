@@ -18,9 +18,9 @@ var b;
 function setup() {
   createCanvas(1000, 600);
   background(50);
-    back = createSprite(500, 300, 1350, 500)
-back.shapeColor = color(0,255,0)
-back.addImage(loadImage("https://raw.githubusercontent.com/cfloresASC/cfloresasc.github.io/master/Beta/floor1.png"))
+  back = createSprite(500, 300, 1350, 500);
+  back.shapeColor = color(0,255,0)
+  back.addImage(loadImage("https://raw.githubusercontent.com/cfloresASC/cfloresasc.github.io/master/Beta/floor1.png"))
   coins = new Group();
   b = new Group();
   b2 = new Group();
