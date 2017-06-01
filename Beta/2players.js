@@ -14,7 +14,7 @@ function setup() {
   wall3 = new Group();
   wall4 = new Group();
   box = createSprite(width/5, width/5, 10, 10);
-  for (var i = 0; i < 1; i++) {
+  for (var i = 0; i < 100; i++) {
   var c = createSprite(random(0, width-10), random(0, height-10), 10, 10);
   c.shapeColor = color(255,255, 0);
   coins.add(c);
