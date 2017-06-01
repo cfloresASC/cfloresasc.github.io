@@ -1,6 +1,7 @@
 body {
     background-color: #0C0C3C;
-font-family: 'Lilita One', cursive;
+	font-family: 'Lilita One', cursive;
+	margin-left: 250px;
 }
 .nav{
 	background-color: 	#1F1F59;

@@ -15,6 +15,7 @@ function setup() {
   var c = createSprite(random(0, width-10), random(0, height-10), 10, 10);
   c.shapeColor = color(255,255, 0);
   coins.add(c);
+  c.addImage(loadImage("https://raw.githubusercontent.com/cfloresASC/cfloresasc.github.io/master/Beta/gif.gif"))
   }
   wall4 = createSprite(500, 599, 1000, 1);
   wall4.shapeColor = color(0, 0, 255);
@@ -30,6 +31,8 @@ function setup() {
 
   coins.shapeColor = color(0,255,0)
   box.shapeColor = color(255, 250, 0);
+  box.addImage(loadImage("https://raw.githubusercontent.com/cfloresASC/cfloresasc.github.io/master/Beta/gif.gif"))
+
 }
 
 function draw(){
