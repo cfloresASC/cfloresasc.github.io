@@ -5,6 +5,9 @@ var box;
 var wall;
 function setup() {
   createCanvas(1000, 600);
+  f = createSprite(500, 300, 1350, 500);
+  f.shapeColor = color(0,255,0)
+  f.addImage(loadImage("https://raw.githubusercontent.com/cfloresASC/cfloresasc.github.io/master/Beta/CoinBackground.png"))
   coins = new Group();
   wall = new Group();
   wall2 = new Group();
@@ -72,7 +75,7 @@ function draw(){
     text("Player 2 Wins", width/3, height/2.5);
   }
   if (coins.length > 0){
-  text(score, width/2, height/2)
+  text(score, 870, 70)
   }
   if (keyDown(UP_ARROW)){
     box.setSpeed(10, 270);  
@@ -99,7 +102,7 @@ function draw(){
     player.setSpeed(8, 0);
   }
   if (coins.length > 0) {
-    text(score, width/2, height/2);
+  text(score, 870, 70)
   }
   else{
     noLoop();
