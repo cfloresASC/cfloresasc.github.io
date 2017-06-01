@@ -39,7 +39,7 @@ function setup() {
   move = true;
   // box.addImage(loadImage("box")) 
 //Enemies
-  for (var i = 0; i < 10; i++) {
+  for (var i = 0; i < 7; i++) {
   var b = createSprite(random(20, width-300), random(0, height-300), 10, 10);
   b.shapeColor = color(255,0,255);
   box.add(b);
@@ -47,20 +47,20 @@ function setup() {
 
 }
 
-  for (var i = 0; i < 10; i++) {
+  for (var i = 0; i < 7; i++) {
   var b2 = createSprite(random(20, width-100), random(0, height-100), 10, 10);
   b2.shapeColor = color(255,0,255);
   box2.add(b2);
   b2.addImage(loadImage("https://raw.githubusercontent.com/cfloresASC/cfloresasc.github.io/master/Beta/medium.png"))
 
 }
-  for (var i = 0; i < 10; i++) {
+  for (var i = 0; i < 7; i++) {
   var b3 = createSprite(random(20, width-100), random(0, height-100), 10, 10);
   b3.shapeColor = color(255,0,255);
   box3.add(b3);
   b3.addImage(loadImage("https://raw.githubusercontent.com/cfloresASC/cfloresasc.github.io/master/Beta/medium.png"))
 
-}  for (var i = 0; i < 10; i++) {
+}  for (var i = 0; i < 7; i++) {
   var b4 = createSprite(random(20, width-100), random(0, height-100), 10, 10);
   b4.shapeColor = color(255,0,255);
   box4.add(b4);
